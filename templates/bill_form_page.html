@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- this links the css to the html-->
+    <link rel="stylesheet" href="static/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h2>The bill Form</h2> 
+    <p class="instructions">Fill in the form and click the button to get the results</p><!--the class is used to pass it to  css-->
+    <form action="/results" method="post"><!--needed to submit the form an take us to result page so we need to set the action to know what happens when we submit-->
+        {{billform.amount.label}} {{billform.amount}} <!--the label and the box to accept the input-->
+        <br>
+        {{billform.period.label}} {{billform.period}}
+        <hr>
+        <p>First flatmate</p>
+        {{billform.name1.label}}{{billform.name1}}
+        <br>
+        {{billform.days_in_house1.label}}{{billform.days_in_house1}}
+        <hr>
+        <p>Second flatmate</p>
+        {{billform.name2.label}}{{billform.name2}}
+        <br>
+        {{billform.days_in_house2.label}}{{billform.days_in_house2}}
+        <br>
+        {{billform.button}}
+
+    </form>
+</body>
+</html>
