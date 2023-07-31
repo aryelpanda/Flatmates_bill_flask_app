@@ -2,8 +2,9 @@ from flask.views import MethodView
 from wtforms import Form, StringField, SubmitField
 from flask import Flask, render_template, request
 from flatmates_bill import flat
+from waitress import serve
 app = Flask(__name__)  # initiate the flask app class, central object
-app.config['DEBUG'] = True
+# app.config['DEBUG'] = True
 
 # each page recives its own class
 
@@ -61,4 +62,5 @@ if __name__ == "__main__":
     app.add_url_rule('/bill', view_func=BillFormPage.as_view
                      ('bill_form_page'))
     app.add_url_rule('/results', view_func=ResultsPage.as_view('results_page'))
+    serve(app, host='localhost', port=8080)
     app.run()
