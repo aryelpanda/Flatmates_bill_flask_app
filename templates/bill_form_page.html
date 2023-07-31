@@ -13,7 +13,7 @@
 <body>
     <h2>The bill Form</h2> 
     <p class="instructions">Fill in the form and click the button to get the results</p><!--the class is used to pass it to  css-->
-    <form action="/results" method="post"><!--needed to submit the form an take us to result page so we need to set the action to know what happens when we submit-->
+    <form action="/bill_form_page" method="post"><!--needed to submit the form an take us to result page so we need to set the action to know what happens when we submit-->
         {{billform.amount.label}} {{billform.amount}} <!--the label and the box to accept the input-->
         <br>
         {{billform.period.label}} {{billform.period}}
@@ -29,6 +29,15 @@
         {{billform.days_in_house2.label}}{{billform.days_in_house2}}
         <br>
         {{billform.button}}
+        <br>
+        <div class="name-container">
+            <!-- We use the classes to style specific parts of the text -->
+            <p class="name text">{{name1}} pays:</p>
+            <p class="amount text">{{amount1}}</p>
+        
+            <p class="name text">{{name2}} pays:</p>
+            <p class="amount text">{{amount2}}</p>
+        </div>
 
     </form>
 </body>

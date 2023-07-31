@@ -22,6 +22,22 @@ class BillFormPage(MethodView):
         # we pass the variable so html recognizes it
         return render_template('bill_form_page.html', billform=bill_form)
 
+    def post(self):
+        billform = BillForm(request.form)
+        # conect the amoutn widget to this variavle
+        # we use the "billform" to get the data from the widgets
+        the_bill = flat.Bill(float(billform.amount.data),
+                             billform.period.data)  # create the bill
+        flatmate1 = flat.FlatMate(
+            billform.name1.data, float(billform.days_in_house1.data))
+        flatmate2 = flat.FlatMate(
+            billform.name2.data, float(billform.days_in_house2.data))
+
+        rounded_amount1 = round(flatmate1.pays(the_bill, flatmate2), 2)
+        rounded_amount2 = round(flatmate2.pays(the_bill, flatmate1), 2)
+        # in the return statment we tell flask witch html page we would like to show, and we send the variavles we want to display also.
+        return render_template('bill_form_page.html', billform=billform, name1=flatmate1.name, amount1=rounded_amount1, name2=flatmate2.name, amount2=rounded_amount2)
+
 
 class ResultsPage(MethodView):
     def post(self):  # post is needed to post the data
@@ -59,8 +75,8 @@ class BillForm(Form):
 if __name__ == "__main__":
     # How the urls are going to look of every page
     app.add_url_rule('/', view_func=HomePage.as_view('home_page'))
-    app.add_url_rule('/bill', view_func=BillFormPage.as_view
+    app.add_url_rule('/bill_form_page', view_func=BillFormPage.as_view
                      ('bill_form_page'))
     app.add_url_rule('/results', view_func=ResultsPage.as_view('results_page'))
-    serve(app, host='localhost', port=8080)
+    # serve(app, host='localhost', port=8080)
     app.run()

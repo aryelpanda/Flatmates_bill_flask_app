@@ -1,17 +1,25 @@
-h2{
-    color:#7C73C0;
-    text-align:center;
+/* Add a container class for the names */
+.name-container {
+    display: flex;
+    justify-content: space-between; /* To place name1 and name2 at the ends of the container */
+}
+
+h2 {
+    color: #7C73C0;
+    text-align: center;
     font-size: 45px;
 }
-.instructions{
-    font-size: 135%;
-    text-align:center;
-}
-.introduction{
-    font-size: 135%;
-    text-align:center;
 
+.instructions {
+    font-size: 135%;
+    text-align: center;
 }
+
+.introduction {
+    font-size: 135%;
+    text-align: center;
+}
+
 #gotoform {
     /* Button styles */
     display: inline-block;
@@ -35,34 +43,36 @@ h2{
     background-color: #563ec1;
     /* Add any other styles you want when the button is hovered */
 }
+
 .row-container {
     display: flex;
     align-items: center; /* Align items vertically at the center (optional) */
-  }
+}
+
 .amount {
     font-size: 60px;
     color: #272829;
-  }
+}
+
 .name {
     font-size: 50px;
     font-weight: bold;
     color: #6528F7;
-  }
-h1{
-    color:#7C73C0;
-    text-align:center;
-    font-size: 45px;
-
 }
 
-input[type = text]{
+h1 {
+    color: #7C73C0;
+    text-align: center;
+    font-size: 45px;
+}
+
+input[type=text] {
     width: 100%;
     padding: 8px 8px;
     margin: 10px 0;
-
 }
 
-input[type = submit]{
+input[type=submit] {
     width: 100%;
     padding: 8px 8px;
     background-color: #6F61C0;
@@ -73,7 +83,8 @@ input[type = submit]{
     cursor: pointer;
     transition: background-color 0.1s ease
 }
-input[type = submit]:hover{
+
+input[type=submit]:hover {
     width: 100%;
     padding: 8px 8px;
     background-color: #B1B2FF;
@@ -84,9 +95,8 @@ input[type = submit]:hover{
     cursor: pointer;
 }
 
-  
-body{
+body {
     font-family: 'Nunito', sans-serif;
-    background-color:#EEF1FF ;
+    background-color: #EEF1FF;
     padding: 40px;
 }
