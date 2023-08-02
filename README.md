@@ -1,18 +1,35 @@
-Project Name: Flatmate Bill Calculator
+# Portfolio Project: Flatmate Rent Calculator
 
-This project utilizes the FPDF library in Python to generate a PDF report that calculates and displays the bill amount for two flatmates. By implementing object-oriented programming (OOP) principles, the application asks for the names of the flatmates, their respective lengths of stay, and the total bill amount. It then computes the amount each flatmate needs to pay based on their proportionate time spent in the house and generates a PDF document with the detailed payment breakdown.
-Features and Functionality
+## Description
 
-    Object-Oriented Programming: The project is built using OOP concepts, providing an organized structure and allowing for extensibility and code reusability.
-    User Input: The application prompts the user to enter the names of the flatmates, their time of stay in the house, and the total bill amount.
-    Calculation: The app calculates the amount each flatmate needs to pay by dividing the bill proportionately based on their length of stay.
-    PDF Generation: The calculated payment breakdown is then displayed in a PDF report, providing a clear overview for the flatmates.
+This is a web application developed using Python and Flask that helps flatmates calculate how much they need to pay for rent based on the total monthly rent and the number of days they stayed in the apartment during that month. It simplifies the process of splitting rent expenses between flatmates based on their occupancy.
 
-Future Improvements
+## Features
 
-To further enhance the project, you could consider implementing the following additional features:
+- Calculate Rent: The app allows flatmates to input the total monthly rent and the number of days each flatmate stayed in the apartment during the billing month.
+- Fair Share Calculation: The app calculates the fair share of rent for each flatmate based on their occupancy days.
+- User-Friendly Interface: The web app provides an intuitive and user-friendly interface for an effortless rent calculation process.
 
-    Error Handling: Add robust error handling to handle invalid user inputs and prevent the application from crashing.
-    Unit Tests: Write unit tests to verify the correctness of the calculations and ensure the code functions as expected.
-    GUI: Develop a graphical user interface (GUI) to provide a more user-friendly experience, allowing users to input data through a visually appealing interface.
-    Database Integration: Implement a database system to store flatmate information, bill details, and payment records for future reference.
+## Requirements
+
+- Python 3.x
+- Flask (Install using `pip install Flask`)
+
+## Lessons Learned
+
+During the development of this portfolio project, I gained valuable experience and learned several key lessons:
+
+- **Python and Flask Basics**: I deepened my understanding of Python and the Flask web framework. I now feel more confident in building web applications using Python.
+- **Web Application Development**: I learned the fundamentals of web application development, including handling HTTP requests, rendering templates, and managing routes in Flask.
+- **User Input and Data Handling**: I explored how to handle user input and process data in the backend. This project taught me how to retrieve data from users, validate input, and perform calculations based on the provided data.
+- **Deployment Considerations**: I gained insight into deploying web applications in a production environment. This includes selecting appropriate WSGI servers, handling static files, and configuring reverse proxies.
+- **ReadMe and Documentation**: Creating this ReadMe file taught me how to document a project effectively. Clear and concise documentation is essential for users and contributors to understand the project and its purpose.
+- **Problem-Solving Skills**: This project challenged me to think critically and solve real-world problems related to rent splitting between flatmates. It enhanced my ability to break down complex tasks into manageable steps and implement solutions efficiently.
+- **Continuous Learning**: Throughout the project, I realized that software development is a continuous learning journey. There's always something new to discover and improve upon, and each project presents an opportunity to expand my knowledge and skills.
+
+Feel free to use and modify the code as per the terms of the license.
+
+## Acknowledgments
+
+- The Flask team for providing an excellent web framework for Python.
+- Inspiration for this project came from the need to simplify rent splitting between flatmates.
